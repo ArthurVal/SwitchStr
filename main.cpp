@@ -173,7 +173,12 @@ int main(int, char* argv[]) {
     // .Case(SomethingElse(), Set(val, 3))
     // ...
 
-    std::printf("val = %d | pos = %zu", val, pos);
+    std::printf("val = %d | pos = ", val);
+    if (pos != std::string_view::npos) {
+        std::printf("%zu\n", pos);
+    } else {
+        std::puts("n/a");
+    }
 
     return val;
 }
