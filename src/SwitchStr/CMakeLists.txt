@@ -8,10 +8,10 @@ target_include_directories(${PROJECT_NAME}
   $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
   )
 
-target_compile_features(${PROJECT_NAME}
-  INTERFACE
-  cxx_std_20
-  )
+# target_compile_features(${PROJECT_NAME}
+#   INTERFACE
+#   cxx_std_17
+#   )
 
 # target_compile_definitions(${PROJECT_NAME}
 #   INTERFACE
