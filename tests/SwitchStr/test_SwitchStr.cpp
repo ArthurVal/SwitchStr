@@ -36,6 +36,8 @@ TEST(SwitchStrTest, Simple) {
                    .Case(MatcherMock(mock), 0)
                    .Case(MatcherMock(mock), 2)
                    .Case(MatcherMock(mock), 3)
+                   .Case(MatcherMock(mock), 4)
+                   .Case(MatcherMock(mock), 5)
                    .Default(42));
 }
 
