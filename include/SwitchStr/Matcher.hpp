@@ -18,7 +18,7 @@ struct HasStrMatcherIsMatchingInterface : std::false_type {};
 template <typename T>
 struct HasStrMatcherIsMatchingInterface<
     T, std::void_t<decltype(std::declval<T>().IsMatching(std::string_view{}))>>
-    : std::is_constructible<
+    : std::is_convertible<
           decltype(std::declval<T>().IsMatching(std::string_view{})), bool> {};
 
 template <typename T>
@@ -34,8 +34,8 @@ struct HasStrMatcherOperatorInterface : std::false_type {};
 template <typename T>
 struct HasStrMatcherOperatorInterface<
     T, std::void_t<decltype(std::declval<T>()(std::string_view{}))>>
-    : std::is_constructible<decltype(std::declval<T>()(std::string_view{})),
-                            bool> {};
+    : std::is_convertible<decltype(std::declval<T>()(std::string_view{})),
+                          bool> {};
 
 template <typename T>
 constexpr bool HasStrMatcherOperatorInterface_v =
