@@ -85,7 +85,7 @@ struct MatcherTraits {
 
 /**
  *  \brief Main function use to dispatch the correct function call to the
- *         matcher \m  with \a str
+ *         matcher \a m  with \a str
  *
  *  \tparam Matcher A valid matcher, based on MatcherTraits impl
  *
